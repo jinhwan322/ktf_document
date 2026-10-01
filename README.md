@@ -70,8 +70,8 @@
 </p>
 
 - 조이스틱(하단)으로 메인 캐릭터를 움직이면 파티원들이 대열을 지어 함께 이동하고, 적을 만나면 각자 자동으로 전투
-- 필드 위에서 몬스터 처치·채집과 퀘스트(상단 "운무의 진 제거")가 이어지는 구조
-- 필드에 놓인 건물(왼쪽 재화 상점 등)에 다가가 상호작용, 오른쪽 메뉴에서 창고·임무·도전·훈련·지도 등 컨텐츠 진입
+- 필드 위에서 몬스터 처치·채집과 퀘스트가 이어지는 구조
+- 필드에 놓인 건물에 다가가 상호작용, 오른쪽 메뉴에서 창고·임무·도전·훈련·지도 등 컨텐츠 진입
 
 ## 클래스 구조
 
@@ -94,14 +94,14 @@ classDiagram
         SuccessSpeechBtnClick()
         EnterDungeon()
     }
-    FieldObject <|-- BaseUnit
-    FieldObject <|-- BaseBuilding
-    BaseUnit <|-- PlayerUnit
-    BaseUnit <|-- EnemyUnit
-    BaseUnit <|-- BossUnit
-    BaseUnit <|-- RankingBossUnit
-    BaseUnit <|-- GuildBossUnit
-    BaseUnit <|-- GrTree
+    FieldObject --> BaseUnit
+    FieldObject --> BaseBuilding
+    BaseUnit --> PlayerUnit
+    BaseUnit --> EnemyUnit
+    BaseUnit --> BossUnit
+    BaseUnit --> RankingBossUnit
+    BaseUnit --> GuildBossUnit
+    BaseUnit --> GrTree
     Squad o-- PlayerUnit : 대열 / 메인 캐릭터
 ```
 
@@ -119,12 +119,12 @@ classDiagram
         GameWin() / GameOver()
         OnDungeonClear()
     }
-    FieldBaseScene <|-- DungeonFieldBase
-    DungeonFieldBase <|-- AwakeDungeon
-    DungeonFieldBase <|-- FieldDungeon
-    DungeonFieldBase <|-- GuildBossDungeon
-    DungeonFieldBase <|-- RankingDungeon
-    DungeonFieldBase <|-- TimeAttackDungeon
+    FieldBaseScene --> DungeonFieldBase
+    DungeonFieldBase --> AwakeDungeon
+    DungeonFieldBase --> FieldDungeon
+    DungeonFieldBase --> GuildBossDungeon
+    DungeonFieldBase --> RankingDungeon
+    DungeonFieldBase --> TimeAttackDungeon
 ```
 
 | 베이스 | 상속 클래스 |
