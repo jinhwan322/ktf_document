@@ -66,7 +66,7 @@
 ## 인게임 스크린샷
 
 <p align="center">
-  <img src="Assets/Resources/%EC%A0%84%EC%9A%B0%EC%B9%98-%EB%8F%84%EC%82%AC%EC%97%B4%EC%A0%84_%EC%9D%B8%EA%B2%8C%EC%9E%84.png" width="360" alt="전우치 - 도사열전 인게임 필드 전투 화면">
+  <img src="Assets/Resources/ingame.png" width="360" alt="전우치 - 도사열전 인게임 필드 전투 화면">
 </p>
 
 - 조이스틱(하단)으로 메인 캐릭터를 움직이면 파티원들이 대열을 지어 함께 이동하고, 적을 만나면 각자 자동으로 전투
